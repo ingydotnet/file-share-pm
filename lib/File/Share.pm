@@ -13,7 +13,7 @@ package File::Share;
 use strict;
 use warnings;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 use base 'Exporter';
 our @EXPORT_OK   = qw[
@@ -69,7 +69,7 @@ sub module_file {
     use File::Share ':all';
 
     my $dir = dist_dir('Foo-Bar');
-    my $file = dist_file('Foo-Bar', '
+    my $file = dist_file('Foo-Bar', 'file.txt');
 
 =head1 DESCRIPTION
 
@@ -80,7 +80,7 @@ be used.
 
 NOTE: module_dist and module_file are not yet supported, because (afaik) there
 is no well known way to populate per-module share files. This may change in
-the future.
+the future. Please contact me if you know how to do this.
 
 =head1 PROBLEM AND SOLUTION
 

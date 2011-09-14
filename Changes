@@ -1,4 +1,10 @@
 ---
+version: 0.02
+date:    Wed Sep 14 14:42:15 CEST 2011
+changes:
+- Fix a documentation mistake
+- Released from Liz++ and Wendy++' master bedroom
+---
 version: 0.01
 date:    Thu Jun 16 08:13:01 EST 2011
 changes:

@@ -5,7 +5,7 @@ SYNOPSIS
         use File::Share ':all';
 
         my $dir = dist_dir('Foo-Bar');
-        my $file = dist_file('Foo-Bar', '
+        my $file = dist_file('Foo-Bar', 'file.txt');
 
 DESCRIPTION
     THis module is a dropin replacement for File::ShareDir. It supports the
@@ -15,7 +15,7 @@ DESCRIPTION
 
     NOTE: module_dist and module_file are not yet supported, because (afaik)
     there is no well known way to populate per-module share files. This may
-    change in the future.
+    change in the future. Please contact me if you know how to do this.
 
 PROBLEM AND SOLUTION
     Module::Install has an "install_share" directive that allows you to
