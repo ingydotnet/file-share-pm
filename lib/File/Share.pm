@@ -40,7 +40,7 @@ sub dist_dir {
     my $path = $INC{$inc} || '';
     if ($path and
         $path =~ s!(\S.*?)[\\/]?\bb?lib\b.*!$1! and
-        -e "$path/Makefile.PL" and
+        ( -e "$path/Makefile.PL" or -e "$path/dist.ini" ) and
         -e "$path/share"
     ) {
         return abs_path "$path/share";
