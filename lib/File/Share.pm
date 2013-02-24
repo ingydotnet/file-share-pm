@@ -40,7 +40,7 @@ sub dist_dir {
     my $path = $INC{$inc} || '';
     if ($path and
         $path =~ s!(\S.*?)[\\/]?\bb?lib\b.*!$1! and
-        ( -e "$path/Makefile.PL" or -e "$path/dist.ini" ) and
+        ( -e "$path/Makefile.PL" or -e "$path/dist.ini" or -e "$path/Build.PL" ) and
         -e "$path/share"
     ) {
         return abs_path "$path/share";
@@ -96,4 +96,3 @@ module corresponding was loaded from a development path.
 L<Devel::Local> gives you an easy way to use a bunch of source repositories as
 though their lib and bin directories had already been installed.
 C<File::Share> lets you play along with that.
-
