@@ -1,4 +1,10 @@
 ---
+version: 0.03
+date:    Sat Jul 20 11:33:34 BRT 2013
+changes:
+- Add Dist::Zilla support
+- Add Module::Build support
+---
 version: 0.02
 date:    Wed Sep 14 14:42:15 CEST 2011
 changes:
