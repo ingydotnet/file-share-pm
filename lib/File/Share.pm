@@ -3,7 +3,7 @@
 # abstract:  Extend File::ShareDir to Local Libraries
 # author:    Ingy döt Net <ingy@ingy.net>
 # license:   perl
-# copyright: 2011
+# copyright: 2011, 2013
 # see:
 # - File::ShareDir
 # - Devel::Local
