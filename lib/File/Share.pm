@@ -38,8 +38,21 @@ sub dist_dir {
     (my $inc = $dist) =~ s!(-|::)!/!g;
     $inc .= '.pm';
     my $path = $INC{$inc} || '';
-    if ($path and
-        $path =~ s!(\S.*?)[\\/]?\bb?lib\b.*!$1! and
+
+    # Find the closest directory containing blib or lib
+    my ($vol, $dir, $file) = File::Spec->splitpath($path);
+    my @dirs = File::Spec->splitdir($dir);
+    if (grep { /\bb?lib\b/ } @dirs) {
+        pop @dirs while @dirs and $dirs[-1] !~ /\bb?lib\b/;
+        pop @dirs;
+        $path = File::Spec->catpath( $vol, File::Spec->catdir(@dirs), '' );
+        $path = File::Spec->curdir if not length $path;
+    } else {
+        # No blib or lib? Force fallback to File::ShareDir.
+        undef $path;
+    }
+
+    if (defined $path and -d $path and
         ( -e "$path/Makefile.PL" or -e "$path/dist.ini" or -e "$path/Build.PL" ) and
         -e "$path/share"
     ) {
