@@ -46,6 +46,7 @@ sub dist_dir {
         pop @dirs while @dirs and $dirs[-1] !~ /\bb?lib\b/; # Walk it back until blib or lib
         pop @dirs;                                          # Get the containing dir
         $path = File::Spec->catpath( $vol, File::Spec->catdir(@dirs), '' );
+        $path = File::Spec->curdir if not length $path;
     } else {
         # No blib or lib? Force fallback to File::ShareDir.
         undef $path;
