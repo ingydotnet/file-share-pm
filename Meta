@@ -1,0 +1,26 @@
+=meta: 0.0.1
+
+name: File-Share
+version: 0.10
+abstract: Extend File::ShareDir to Local Libraries
+
+license: perl
+copyright: 2014. Ingy döt Net
+author:
+  name: Ingy döt Net
+  email: ingy@ingy.net
+  github: ingydotnet
+  twitter: ingydotnet
+  freenode: ingy
+  homepage: http://ingy.net
+
+requires:
+  perl: 5.8.1
+  File::ShareDir: 1.03
+
+devel:
+  git: git@github.org/ingydotnet/file-share-pm
+  irc: irc.perl.org/#perl
+  bug: https://github.com/ingydotnet/file-share-pm/issues/
+
+=travis: perl

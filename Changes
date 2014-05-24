@@ -1,4 +1,10 @@
 ---
+version: 0.10
+date:    Fri May 23 18:37:50 PDT 2014
+changes:
+- Look for lib instead of Makefile.PL etc
+- Change to Zilla::Dist
+---
 version: 0.03
 date:    Sat Sep 14 14:37:47 PDT 2013
 changes:
