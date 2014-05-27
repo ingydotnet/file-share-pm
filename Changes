@@ -1,4 +1,9 @@
 ---
+version: 0.11
+date:    Tue May 27 15:12:22 CEST 2014
+changes:
+- Fix for FreeBSD
+---
 version: 0.10
 date:    Fri May 23 18:37:50 PDT 2014
 changes:
