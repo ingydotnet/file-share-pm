@@ -10,10 +10,16 @@ See http://github.com/ingydotnet/kwim-pm#readme
 
 File::Share - Extend File::ShareDir to Local Libraries
 
+=for html
+<a href="https://travis-ci.org/ingydotnet/file-share-pm"><img src="https://travis-ci.org/ingydotnet/file-share-pm.png" alt="file-share-pm"></a>
+
+=for html
+<a href="https://coveralls.io/r/ingydotnet/file-share-pm?branch=master"><img src="https://coveralls.io/repos/ingydotnet/file-share-pm/badge.png" alt="file-share-pm"></a>
+
 =head1 SYNOPSIS
 
     use File::Share ':all';
-    
+
     my $dir = dist_dir('Foo-Bar');
     my $file = dist_file('Foo-Bar', 'file.txt');
 
