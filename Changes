@@ -1,4 +1,10 @@
 ---
+version: 0.11
+date:    Sat Jun 14 09:48:46 PDT 2014
+changes:
+- Pod fix
+- Add travis badges
+---
 version: 0.10
 date:    Fri May 23 18:37:50 PDT 2014
 changes:
