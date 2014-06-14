@@ -1,4 +1,9 @@
 ---
+version: 0.12
+date:    Sat Jun 14 12:13:53 PDT 2014
+changes:
+- New badge syntax in doc
+---
 version: 0.11
 date:    Sat Jun 14 09:48:46 PDT 2014
 changes:
