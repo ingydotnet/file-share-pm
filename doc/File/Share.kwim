@@ -3,9 +3,7 @@ File::Share
 
 Extend File::ShareDir to Local Libraries
 
-<badge-travis ingydotnet/file-share-pm>
-
-<badge-coveralls ingydotnet/file-share-pm>
+<badge travis coveralls ingydotnet/file-share-pm>
 
 = Synopsis
 
