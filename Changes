@@ -1,4 +1,10 @@
 ---
+version: 0.13
+date:    Tue Jun 17 10:55:13 PDT 2014
+changes:
+- Remove ABSTRACT
+- Manual VERSION
+---
 version: 0.12
 date:    Sat Jun 14 12:13:53 PDT 2014
 changes:

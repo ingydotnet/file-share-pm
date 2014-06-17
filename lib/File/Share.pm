@@ -1,7 +1,5 @@
-# ABSTRACT: Extend File::ShareDir to Local Libraries
-
 package File::Share;
-
+our $VERSION = '0.13';
 use strict;
 use warnings;
 
