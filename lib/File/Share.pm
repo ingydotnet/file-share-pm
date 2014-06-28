@@ -1,5 +1,5 @@
 package File::Share;
-our $VERSION = '0.13';
+our $VERSION = '0.14';
 use strict;
 use warnings;
 
@@ -26,8 +26,9 @@ sub dist_dir {
     (my $inc = $dist) =~ s!(-|::)!/!g;
     $inc .= '.pm';
     my $path = $INC{$inc} || '';
+    $path =~ s/$inc$//;
+    $path = Cwd::realpath( File::Spec->catfile($path,'..') );
     if ($path and
-        $path =~ s!(\S.*?)[\\/]?\bb?lib\b.*!$1! and
         -d "$path/lib" and
         -e "$path/share"
     ) {
