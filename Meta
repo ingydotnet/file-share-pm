@@ -1,7 +1,7 @@
 =meta: 0.0.1
 
 name: File-Share
-version: 0.14
+version: 0.15
 abstract: Extend File::ShareDir to Local Libraries
 
 license: perl
@@ -19,10 +19,10 @@ requires:
   File::ShareDir: 1.03
 
 devel:
-  git: git@github.org/ingydotnet/file-share-pm
-  irc: irc.freepan.net#ingy
-  bug: https://github.com/ingydotnet/file-share-pm/issues/
+  git: https://github.com/ingydotnet/file-share-pm
+  bug: https://github.com/ingydotnet/file-share-pm/issues
+  irc: irc.freenode.net#ingy
 
 =travis:
   type: perl
-  irc: irc.freepan.net#ingy
+  irc: irc.freenode.net#ingy

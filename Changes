@@ -1,4 +1,9 @@
 ---
+version: 0.15
+date:    Wed Jul 16 23:05:27 PDT 2014
+changes:
+- Fix Meta and add Contributing file
+---
 version: 0.14
 date:    Sat Jun 28 12:34:23 PDT 2014
 changes:
