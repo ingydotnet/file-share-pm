@@ -4,7 +4,8 @@ use File::Share ':all';
 use Cwd qw[abs_path cwd];
 
 BEGIN {
-    chdir 'xt/Foo-Bar'
+    my $xt = -e 'xt' ? 'xt' : 'test/devel';
+    chdir "$xt/Foo-Bar"
         or die "Can't chdir: $!";
 }
 

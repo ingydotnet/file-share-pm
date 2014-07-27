@@ -1,4 +1,9 @@
 ---
+version: 0.16
+date:    Sat Jul 26 19:56:26 PDT 2014
+changes:
+- Fix issue/6 (@tsibley++)
+---
 version: 0.15
 date:    Wed Jul 16 23:05:27 PDT 2014
 changes:
