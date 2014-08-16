@@ -1,16 +1,15 @@
 use strict;
-use File::Basename;
+my $xt; use lib ($xt = -e 'xt' ? 'xt' : 'test/devel');
 
 use Test::More tests => 2;
 
 use File::Share ':all';
 use Cwd qw[abs_path cwd];
 
-my $xt = -e 'xt' ? 'xt' : 'test/devel';
 my $share_dir  = abs_path "$xt/MB/share";
 my $share_file = abs_path "$xt/MB/share/o/hai.txt";
 
-use lib dirname(__FILE__) . '/MB/lib';
+use lib "$xt/MB/lib";
 use MB;
 
 is dist_dir('MB'), $share_dir, 'Dir is correct';

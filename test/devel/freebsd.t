@@ -1,11 +1,11 @@
 use strict; use warnings;
-use File::Basename;
+my $xt; use lib ($xt = -e 'xt' ? 'xt' : 'test/devel');
 
 use Test::More 'no_plan';
 use File::Share ':all';
 
 use Cwd qw[abs_path cwd];
-use lib dirname(__FILE__) . '/freebsd/usr/local/lib/perl5/site_perl/5.16';
+use lib "$xt/freebsd/usr/local/lib/perl5/site_perl/5.16";
 use Foo::Bar;
 
 my $xt = -e 'xt' ? 'xt' : 'test/devel';
