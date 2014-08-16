@@ -1,5 +1,5 @@
 package File::Share;
-our $VERSION = '0.22';
+our $VERSION = '0.23';
 use strict;
 use warnings;
 
@@ -17,9 +17,9 @@ our %EXPORT_TAGS = (
     ALL => [ @EXPORT_OK ],
 );
 
-use File::ShareDir 1.03 ();
+use File::ShareDir();
 use Cwd qw[abs_path];
-use File::Spec ();
+use File::Spec();
 
 sub dist_dir {
     my ($dist) = @_;
