@@ -1,7 +1,7 @@
 =meta: 0.0.2
 
 name: File-Share
-version: 0.21
+version: 0.22
 abstract: Extend File::ShareDir to Local Libraries
 language: perl
 license: perl
@@ -9,7 +9,7 @@ copyright: 2011-2014
 
 author:
   name: Ingy döt Net
-  email: ingy@ingy.net
+  email: ingy@cpan.org
   homepage: http://ingy.net
   github: ingydotnet
   twitter: ingydotnet
