@@ -1,7 +1,7 @@
 =meta: 0.0.2
 
 name: File-Share
-version: 0.24
+version: 0.25
 abstract: Extend File::ShareDir to Local Libraries
 language: perl
 license: perl

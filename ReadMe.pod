@@ -23,7 +23,7 @@ File::Share - Extend File::ShareDir to Local Libraries
 
 =head1 DESCRIPTION
 
-THis module is a dropin replacement for L<File::ShareDir>. It supports the
+This module is a dropin replacement for L<File::ShareDir>. It supports the
 C<dist_dir> and C<dist_file> functions, except these functions have been
 enhanced to understand when the developer's local C<./share/> directory
 should be used.
