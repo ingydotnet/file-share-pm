@@ -17,25 +17,33 @@ our %EXPORT_TAGS = (
 );
 
 use File::ShareDir();
-use Cwd qw[abs_path];
+use Cwd qw(abs_path);
 use File::Spec();
 
 sub dist_dir {
     my ($dist) = @_;
     (my $inc = $dist) =~ s!(-|::)!/!g;
     $inc .= '.pm';
+
     my $path = $INC{$inc} || '';
     $path =~ s/$inc$//;
-    $path = Cwd::realpath( File::Spec->catfile($path,'..') );
-    if ($path and
-        -d "$path/lib" and
-        -e "$path/share"
+    $path = Cwd::realpath( File::Spec->catfile($path, '..') );
+
+    if ($path =~ m<^(.*?)[\/\\]blib\b> and
+        -d File::Spec->catdir($1, 'share') and
+        -d ($_ = File::Spec->catdir($1, 'share'))
     ) {
-        return abs_path "$path/share";
+        return abs_path($_);
     }
-    else {
-        return File::ShareDir::dist_dir($dist);
+
+    if ($path and
+        -d File::Spec->catdir($path, 'lib') and
+        -d ($_ = File::Spec->catdir($path, 'share'))
+    ) {
+        return abs_path($_);
     }
+
+    return File::ShareDir::dist_dir($dist);
 }
 
 sub dist_file {
