@@ -1,6 +1,6 @@
 use strict; use warnings;
 package File::Share;
-our $VERSION = '0.25';
+our $VERSION = '0.26';
 
 use base 'Exporter';
 our @EXPORT_OK   = qw[
