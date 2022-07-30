@@ -24,3 +24,6 @@ requires:
   perl: '5.8.1'
   File::ShareDir: '1.03'
   Readonly: '2.05'
+
+=zild:
+  no-travis: true
