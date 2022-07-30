@@ -21,5 +21,6 @@ devel:
   irc: irc.freenode.net#pkg
 
 requires:
-  perl: 5.8.1
-  File::ShareDir: 1.03
+  perl: '5.8.1'
+  File::ShareDir: '1.03'
+  Readonly: '2.05'

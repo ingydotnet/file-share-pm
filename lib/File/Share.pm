@@ -29,18 +29,19 @@ sub dist_dir {
     $path =~ s/$inc$//;
     $path = Cwd::realpath( File::Spec->catfile($path, '..') );
 
+    my $dir;
     if ($path =~ m<^(.*?)[\/\\]blib\b> and
         -d File::Spec->catdir($1, 'share') and
-        -d ($_ = File::Spec->catdir($1, 'share'))
+        -d ($dir = File::Spec->catdir($1, 'share'))
     ) {
-        return abs_path($_);
+        return abs_path($dir);
     }
 
     if ($path and
         -d File::Spec->catdir($path, 'lib') and
-        -d ($_ = File::Spec->catdir($path, 'share'))
+        -d ($dir = File::Spec->catdir($path, 'share'))
     ) {
-        return abs_path($_);
+        return abs_path($dir);
     }
 
     return File::ShareDir::dist_dir($dist);
