@@ -1,4 +1,11 @@
 ---
+version: 0.27
+date:    Sat 30 Jul 2022 02:27:02 PM PDT
+changes:
+- Fix for cpantesters fail related to $_
+- Thanks to ANEI, LEONT and TINITA for helping me
+- Update files, remove travis
+---
 version: 0.26
 date:    Mon 25 Jul 2022 05:16:08 PM PDT
 changes:
